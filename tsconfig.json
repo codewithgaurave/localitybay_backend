@@ -26,6 +26,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "src/admin/components/**/*.tsx"
   ]
 } 

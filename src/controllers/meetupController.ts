@@ -2,7 +2,8 @@ import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import catchAsync from '../utils/catchAsync';
 import { MeetupService } from '../services/meetupService';
-import { ICreateMeetupRequest, IUpdateMeetupRequest, IMeetupFilters, AuthenticatedRequest } from '../types';
+import { ICreateMeetupRequest, IUpdateMeetupRequest, IMeetupFilters } from '../types';
+import { AuthenticatedRequest } from '../types/AuthenticatedRequest';
 import ApiError from '../utils/ApiError';
 import SuccessResponse from '../utils/ApiSuccess';
 
