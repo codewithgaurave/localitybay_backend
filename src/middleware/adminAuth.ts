@@ -5,15 +5,6 @@ import ApiError from '../utils/ApiError';
 import httpStatus from 'http-status';
 import { User } from '../models/User';
 
-// Extend Session interface to include custom properties
-declare module 'express-session' {
-  interface SessionData {
-    adminUser?: any;
-    user?: any;
-    admin?: any;
-  }
-}
-
 // Extend Request interface to include user
 declare global {
   namespace Express {
@@ -48,7 +39,7 @@ export const adminAuth = async (req: Request, res: Response, next: NextFunction)
     if (req.session) {
       
       // Check for AdminJS session data - it might be stored differently
-      const adminUser = req.session.adminUser || req.session.user || req.session.admin;
+      const adminUser = (req.session as any).adminUser || (req.session as any).user || (req.session as any).admin;
       
       if (adminUser) {
         const user = await User.findById(adminUser.id || adminUser._id);

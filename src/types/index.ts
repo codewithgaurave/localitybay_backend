@@ -1,16 +1,3 @@
-import { Request } from 'express';
-
-// Properly extend Express Request interface
-export interface AuthenticatedRequest extends Request {
-  user?: {
-    _id: string;
-    id: string;
-    email: string;
-    name: string;
-    role: string;
-  };
-}
-
 // User types
 export interface IUser {
   _id: string;

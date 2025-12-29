@@ -2,7 +2,8 @@ import { Request, Response } from 'express';
 import httpStatus from 'http-status';
 import catchAsync from '../utils/catchAsync';
 import { UserService } from '../services/userService';
-import { IUpdateUserRequest, AuthenticatedRequest } from '../types';
+import { IUpdateUserRequest } from '../types';
+import { AuthenticatedRequest } from '../types/AuthenticatedRequest';
 import ApiError from '../utils/ApiError';
 import SuccessResponse from '../utils/ApiSuccess';
 
