@@ -25,7 +25,7 @@ import { ComponentLoader } from "adminjs";
 const componentLoader = new ComponentLoader();
 
 const Components = {
-  Dashboard: componentLoader.add("Dashboard", "./components/Dashboard"),
+  // Dashboard: componentLoader.add("Dashboard", "./components/Dashboard"),
   // other custom components
 };
 // Register the adapter
@@ -36,9 +36,9 @@ AdminJS.registerAdapter({
 
 // AdminJS configuration
 const adminJs = new AdminJS({
-  dashboard: {
-    component: Components.Dashboard,
-  },
+  // dashboard: {
+  //   component: Components.Dashboard,
+  // },
   componentLoader,
   resources: [
     {
