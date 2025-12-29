@@ -1,0 +1,15 @@
+{
+  "name": "Test User",
+  "email": "test@example.com",
+  "password": "password123",
+  "userId": "@testuser",
+  "location": {
+    "address": "Test Address, Mumbai",
+    "coordinates": [72.8777, 19.0760],
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India"
+  },
+  "interests": ["technology", "meetups"],
+  "phone": "+919876543210"
+}
