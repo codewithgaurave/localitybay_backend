@@ -1,8 +1,14 @@
 import { Request } from 'express';
 
-// Extend Express Request interface
+// Properly extend Express Request interface
 export interface AuthenticatedRequest extends Request {
-  user?: any;
+  user?: {
+    _id: string;
+    id: string;
+    email: string;
+    name: string;
+    role: string;
+  };
 }
 
 // User types
