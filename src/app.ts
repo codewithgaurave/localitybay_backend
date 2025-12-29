@@ -51,7 +51,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api', apiRoutes);
 
 // Test session endpoint
-app.get('/api/test-session', (req, res) => {
+app.get('/api/test-session', (req: express.Request, res: express.Response) => {
   res.json({ 
     session: req.session,
     hasSession: !!req.session,
@@ -60,7 +60,7 @@ app.get('/api/test-session', (req, res) => {
 });
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get('/api/health', (req: express.Request, res: express.Response) => {
   res.json({ 
     status: 'OK', 
     message: 'LocalityBay API is running',
@@ -69,7 +69,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // 404 handler
-app.use('*', (req, res) => {
+app.use('*', (req: express.Request, res: express.Response) => {
   res.status(404).json({ 
     status: false,
     message: 'Route not found',
